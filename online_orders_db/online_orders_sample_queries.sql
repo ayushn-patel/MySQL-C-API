@@ -30,14 +30,14 @@
 
 
 /* 7) Query for getting customer name along with customer code, order code and the total amt to be paid */
--> 	Select 
+ 	Select 
 	T0.CUST_CODE, T0.CUST_NAME, T1.ORD_CODE, T1.TOTAL_AMT
 	From CUSTOMERS T0
 	Inner Join ORDERS T1 on T1.CUST_CODE = T0.CUST_CODE
 
 
 /* 8) Query for getting order code along with agent code, customer name, customer code, customer phone number and customer city, country */
--> 	Select 
+ 	Select 
 	T0.ORD_CODE, T2.AGENT_CODE, T1.CUST_NAME, T1.CUST_CODE, T1.PHONE_NO, T1.CUST_CITY, T1.CUST_COUNTRY
 	From ORDERS T0
 	Left Join CUSTOMERS T1 on T1.CUST_CODE = T0.CUST_CODE
@@ -45,7 +45,7 @@
 
 
 /* 9) Query for getting customer name, customer code, order code and order descrpition for which the total amount is greater the 5000 */
--> 	Select 
+ 	Select 
 	T0.CUST_CODE, T0.CUST_NAME, T1.ORD_CODE, T1.ORD_DESCRIPTION, T1.TOTAL_AMT
 	From CUSTOMERS T0
 	Left Join ORDERS T1 on T1.CUST_CODE = T0.CUST_CODE
@@ -54,7 +54,7 @@
 
 
 /* 10) Query for getting customer name, agent code, order code and order description for which customer city is bangalore */
-->  Select 
+	Select 
 	T0.CUST_NAME, 
 	T1.AGENT_CODE,
 	T2.ORD_CODE,
